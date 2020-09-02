@@ -1,57 +1,106 @@
 
-class canales_abiertos:
-    
-    def __init__(self, y):
-        self.y = y
+class Rectangular():
 
-
-class Rectangular(canales_abiertos):
-    
     def __init__(self, y, b):
-        super().__init__(y)
-        # self.b = b
+        self.y = y
+        self.b = b
+
+    @property
+    def area(self):
+        a = self.y * self.b
+        self.a = a
+        return a
+
+    @property
+    def perimeter(self):
+        p = self.b + 2 * self.y
+        self.p = p
+        return p
+
+    @property
+    def radioh(self):
+        rh = self.a / self.p
+        return rh
+
+    @property
+    def anch_sup(self):
+        return self.b
+
+    @property
+    def depthh(self):
+        return self.y
 
 
-class Trapezoidall(canales_abiertos):
+class Trapezoidal():
+
+    # def __init__(self, y, b, z):
+    #     self.y = y
+    #     self.b = b
+    #     self.z = z
+
+    # @property
+    # def perimeter(self):
+    #     p = self.b + 2 * self.y
+    #     self.p = p
+    #     return p
+
+    # @property
+    # def radioh(self):
+    #     rh = self.a / self.p
+    #     return rh
+
+    # @property
+    # def anch_sup(self):
+    #     return self.b
+
+    # @property
+    # def depthh(self):
+    #     return self.y
+
+# class Triangular():
+
+#     def __init__(self, y, z):
+
+
+# class Circular():
+
+#     def __init__(self, y, d):
+
+
+
+# class Parabolica():
     
-    def __init__(self, y):
-        super().__init__(y)
+#     def __init__(self, y):
+#         super().__init__(y)
 
 
-class Triangular(canales_abiertos):
+# class Rectesquina():
     
-    def __init__(self, y):
-        super().__init__(y)
+#     def __init__(self, y,b,r):
+        
 
 
-class Circular(canales_abiertos):
+# class Trianesquina():
     
-    def __init__(self, y):
-        super().__init__(y)
+#     def __init__(self, y,z,r):
 
-
-class Parabolica(canales_abiertos):
-    
-    def __init__(self, y):
-        super().__init__(y)
-
-
-class Rectesquina(canales_abiertos):
-    
-    def __init__(self, y):
-        super().__init__(y)
-
-
-class Trianesquina(canales_abiertos):
-    
-    def __init__(self, y):
-        super().__init__(y)
-
-
+def parameters(channel_type):
+    print("El área es: ",channel_type.area)
+    print("El perimetro es: ",channel_type.perimeter)
+    print("El radio hidráulico es: ",channel_type.radioh)
+    print("El ancho superficial es: ",channel_type.anch_sup)
+    print("La profundidad hidráulica es: ", channel_type.depthh)
 
 def run():
-    pass
+    #Canal rectangular
+    rect = Rectangular(2,2)
+    parameters(rect)
 
+    #canal trapezoidal
+    trap = Trapezoidal(2,2,1)
+    parameters(trap)
+
+    #Canal Triangular
 
 if __name__ == '__main__':
     run()
