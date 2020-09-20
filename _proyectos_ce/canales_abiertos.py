@@ -33,29 +33,36 @@ class Rectangular():
 
 class Trapezoidal():
 
-    # def __init__(self, y, b, z):
-    #     self.y = y
-    #     self.b = b
-    #     self.z = z
+    def __init__(self, y, b, z):
+        self.y = y
+        self.b = b
+        self.z = z
 
-    # @property
-    # def perimeter(self):
-    #     p = self.b + 2 * self.y
-    #     self.p = p
-    #     return p
+    @property
+    def area(self):
+        a = (self.b + self.z * self.y) * self.z
+        self.a = a
+        return a
 
-    # @property
-    # def radioh(self):
-    #     rh = self.a / self.p
-    #     return rh
+    @property
+    def perimeter(self):
+        p = self.b + 2*self.h * (1 + self.z ** 2) ** 0.5
+        self.p = p
+        return p
 
-    # @property
-    # def anch_sup(self):
-    #     return self.b
+    @property
+    def radioh(self):
+        rh = self.a / self.p
+        return rh
 
-    # @property
-    # def depthh(self):
-    #     return self.y
+    @property
+    def anch_sup(self):
+        self.t= self.b + 2 * self.z * self.y
+        return self.t
+
+    @property
+    def depthh(self):
+        return self.a/self.t
 
 # class Triangular():
 
