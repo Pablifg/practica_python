@@ -64,9 +64,34 @@ class Trapezoidal():
     def depthh(self):
         return self.a/self.t
 
-# class Triangular():
+class Triangular():
 
-#     def __init__(self, y, z):
+    def __init__(self, y, z):
+        self.y = y
+        self.z = z
+
+    @property
+    def area(self):
+        a = self.z * (self.y ** 2)
+        return a
+
+    @property
+    def perimeter(self):
+        p = self.y * 2 * (1 + self.z ** 2) ** 0.5
+        return p
+
+    @property
+    def radioh(self):
+        return a/p
+
+    @property
+    def ancho_sup(self):
+        return self.z * 2 * self.y
+
+    
+    @property
+    def depthh(self): 
+        return self.y
 
 
 # class Circular():
@@ -108,9 +133,18 @@ def run():
     parameters(trap)
 
     #Canal Triangular
+    trian = Triangular(2,0.5)
+    parameters(trian)
+
 
 if __name__ == '__main__':
     run()
 
 
 #Una línea de practica de commit
+#Quiero escribir un poema
+#No tengo idea de donde comenzar
+#Es por eso que lleno estás simples líneas
+#COn palabras vacías sin recordar
+#Jajaja es para el commit :v
+#Práctica de GIT
