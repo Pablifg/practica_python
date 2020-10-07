@@ -1,4 +1,9 @@
+    """
+    AQUÍ VA MI CABECERA
 
+AUTOR PABLO GALLEGOS
+CURSO: GIT AND GITHUB
+    """
 class Rectangular():
 
     def __init__(self, y, b):
