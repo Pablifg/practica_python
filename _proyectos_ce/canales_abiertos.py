@@ -1,3 +1,6 @@
+#Importar nombre, usuario
+from usuario_nombre import *
+
 """
 AQUÍ VA MI CABECERA
 
@@ -143,6 +146,8 @@ def run():
 
 
 if __name__ == '__main__':
+    nombre = input('What is your name?: ')
+    usuario_nombre(nombre)
     run()
 
 
