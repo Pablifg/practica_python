@@ -8,6 +8,7 @@ AUTOR PABLO GALLEGOS
 CURSO: GIT AND GITHUB
 """
 class Rectangular():
+ #un texto vacío solo para ver un pequeño cambio bro
 
     def __init__(self, y, b):
         self.y = y
