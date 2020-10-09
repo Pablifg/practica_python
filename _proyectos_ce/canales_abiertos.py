@@ -147,7 +147,7 @@ def run():
 
 
 if __name__ == '__main__':
-    nombre = input('What is your name?: ')
+    nombre = input('What is your name?: ') #Pablo debe ir
     usuario_nombre(nombre)
     run()
 
