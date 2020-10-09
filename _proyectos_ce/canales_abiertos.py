@@ -147,7 +147,8 @@ def run():
 
 
 if __name__ == '__main__':
-    nombre = input('What is your name?: ')
+    nombre = input('What is your name?: ') #Fernado.
+    #Suscribete a Pableinsia
     usuario_nombre(nombre)
     run()
 
