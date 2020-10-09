@@ -147,8 +147,12 @@ def run():
 
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     nombre = input('What is your name?: ') #Fernado.
     #Suscribete a Pableinsia
+=======
+    nombre = input('What is your name?: ') #Pablo debe ir
+>>>>>>> cabecera
     usuario_nombre(nombre)
     run()
 
