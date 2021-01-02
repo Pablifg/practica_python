@@ -1,5 +1,7 @@
 #Master 1
 
+#Master 2
+
 class usuario:
     """
     Determina nombre de usuario
