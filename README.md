@@ -9,6 +9,8 @@ Un repositorio increíble de prácticas con python.
 * Buenas prácticas (Debo ir mejorando)
 * Trucos del profe Freddy
 * Creado por su servidor
+* Incluye ejemplos en Windows, Linux y Ma
+* Disponible para todas las edades.
 
 Ojo, **este readme es un chiste**. Diseñado para el ejemplo. No se lo tomen enserio.
 
