@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf-16 -*-
 import random
 
 IMAGES = ['''
@@ -146,5 +146,5 @@ def run():
 
 
 if __name__ == '__main__':
-    print('B I E N V E N I D O S  A L  J U E G O  D E  L O S  A H O R C A D O S')
+    print('B I E N V E N I D O S  A L😎  J U E G O  D E  L O S  A H O R C A D O S')
     run()

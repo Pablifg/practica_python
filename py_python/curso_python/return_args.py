@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 def find_volume(length=1, width=1, depth=1):
     """
     Find the volumen of a cube
