@@ -5,9 +5,9 @@
 def run():
     #Abrir texto
     counter = 0;
-    with open('aleph.txt') as f:
+    with open('./aleph.txt') as f:
         for line in f:
-             counter += line.count('Beatriz')
+            counter += line.count('Beatriz')
 
     print(f'Beatriz se encuentra {counter} veces en el texto')
 
