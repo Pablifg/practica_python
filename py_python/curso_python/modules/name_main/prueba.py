@@ -1,0 +1,1 @@
+print("prubea __name__ : ", __name__)
