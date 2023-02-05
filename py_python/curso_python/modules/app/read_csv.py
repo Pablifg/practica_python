@@ -23,6 +23,7 @@ def read_csv(path):
 # RETO: TRANSFORMARLO A DICCIONARIO PARA LECTURA MÁS SENCILLA
 ## Su key debe ser el nombre de la columna y el value la row
 ## Necesita retornar lista con todos los diccionarios
+## Permite hacer consulta de forma más precisa a la info :D
 
 
 # Correr como script desde terminal
