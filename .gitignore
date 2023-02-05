@@ -247,3 +247,5 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,python
 
 #Owner
+py_python/curso_python/modules/app/__pycache__/
+py_python/curso_python/modules/pkg/__pycache__/
