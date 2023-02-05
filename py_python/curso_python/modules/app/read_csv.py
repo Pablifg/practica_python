@@ -1,15 +1,17 @@
 import csv
 
+
 def read_csv(path):
     with open(path, 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
-        header = next(reader) # columnas. La primera fila son los header en este archivo .csv
+        # columnas. La primera fila son los header en este archivo .csv
+        header = next(reader)
         #print(header)
         data = []
         # Leer fila a fila
         for row in reader:
             # Unir 2 arrays con ZIP
-            iterable = zip(header, row) # Une en array de tuplas.
+            iterable = zip(header, row)  # Une en array de tuplas.
             # print(list(iterable))
             #Generar diccionario a partir de iterable
             country_dict = {key: value for key, value in iterable}
@@ -18,7 +20,7 @@ def read_csv(path):
             # print('***' * 5)
             # print(row)
 
-        return data # array que con diccionarios
+        return data  # array que con diccionarios
 
 # RETO: TRANSFORMARLO A DICCIONARIO PARA LECTURA MÁS SENCILLA
 ## Su key debe ser el nombre de la columna y el value la row
@@ -28,5 +30,10 @@ def read_csv(path):
 
 # Correr como script desde terminal
 if __name__ == '__main__':
-    data = read_csv('./data.csv')
-    print(data)
+    #data = read_csv("./data.csv")
+    data = read_csv("./data.csv")
+    #print(os.getcwd())
+    #print(os.path.join(os.getcwd(), 'data.csv'))
+    #path = os.path.join(os.getcwd(), 'data.csv')
+    #data = read_csv(path)
+    print(data[0])

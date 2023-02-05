@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-from GraphicPy import charts
 
 def generate_bar_chart(labels, values):
     fig, ax = plt.subplots()
