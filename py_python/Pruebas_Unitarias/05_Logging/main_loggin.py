@@ -14,7 +14,10 @@ import logging # por default solo imprime msg en consola > 30.
 ## Cambiando el formato
 logging.basicConfig(level=logging.INFO,
         format="%(threadName)s - %(levelname)s - %(asctime)s - Message:%(message)s", #process, processName, thread, threadName
-                    datefmt="%Y/%m/%d" #formato fechas
+                    datefmt="%Y/%m/%d",#formato fechas
+                    # Almacenar loggings - No se imprimen en consola pero se almacenan líneas al .log
+                    filename="register.log",
+                    filemode="a" # añadirse todos los log al final del archivo
                 )
 
 def suma (numero1: int, numero2:int) -> int:
