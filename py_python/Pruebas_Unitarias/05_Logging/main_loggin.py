@@ -11,7 +11,11 @@ import logging # por default solo imprime msg en consola > 30.
 # Por lo tanto, Debug menos importante y Critical más importante
 
 #logging.basicConfig(level=20) # Modificar el comportamiento default de logging para indicar desde q nivel queremos visualizar msg
-logging.basicConfig(level=logging.DEBUG)
+## Cambiando el formato
+logging.basicConfig(level=logging.INFO,
+        format="%(threadName)s - %(levelname)s - %(asctime)s - Message:%(message)s", #process, processName, thread, threadName
+                    datefmt="%Y/%m/%d" #formato fechas
+                )
 
 def suma (numero1: int, numero2:int) -> int:
     """Permite sumar 2 números enteros.
