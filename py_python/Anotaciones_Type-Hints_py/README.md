@@ -21,3 +21,4 @@ Es una ayuda para el usuario que codifica, NO PARA EL INTÉRPRETE
 
 
 ## Type Hints
+Son opcionales y no afectan al comportamiento en tiempo de ejecución
