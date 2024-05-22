@@ -65,3 +65,56 @@ else:
 finally:
     <something>
 ```
+
+
+# Logs de Errores
+Generar archivos logs a partir de las excepciones que pueden ocurrir en el programa.
+
+Con los archivos logs seremos capaces de generar historial de los errores ocurridos en tiempo de ejecución
+- Historial: podemos identificar que tipo de excepción fue lanzada, cuando y dónde fue lanzada
+  - Tendremos más contexto del error -> para solucionar luego los errores
+
+Errores no deben pasar desapercibidos, por lo tanto, lo mínimo que podemos hacer es imprimirlos en consola.
+
+" Lo recomendable es generar archivos logs donde almacenará todos los errores ocurridos en tiempo de ejecución
+
+## Logging - Módulo de python
+Imprimir mensajes en consola que se encontrarán categorizados.
+
+Tenemos 5 tipos de mensajes con su respectivo nivel de importancia:
+1. INFO      = 10
+2. DEBUG     = 20
+3. WARNING   = 30
+4. ERROR     = 40
+5. CRITICAL  = 50
+
+A mayor nivel, más importancia debe prestar al mensaje.
+
+### Estructura
+
+```
+import logging
+
+logging.info('Este es un mensaje informativo')
+logging.debug('Este es un mensaje para debug')
+logging.warning('Este es un mensaje de advertencia')
+logging.error('Este es un mensaje de error')
+logging.critical('Este es un mensaje CRITICO')
+```
+
+Por defecto, el módulo logging se encuentra configurado para mostrar mensajes cuyo nivel de importancia es 30
+
+#### Cambiar Configuración
+Ver todos los mensajes
+```
+logging.basicConfig(level=logging.INFO)
+```
+o
+```
+logging.basicConfig(level=10)
+```
+
+
+#### Referencias:
+- https://docs.python.org/es/3/howto/logging.html#advanced-logging-tutorial
+- https://docs.python.org/3/library/logging.html
