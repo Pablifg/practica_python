@@ -16,3 +16,6 @@ Ojo, **este readme es un chiste**. Diseñado para el ejemplo. No se lo tomen ens
 
 
 *Ayudado de [Meditor.md](http:/https://pandao.github.io/editor.md/en.html/ "Meditor.md")* 
+
+### THis is a new couse: WEB SCRAPPING WITH PYTHON
+This project I learnt how to make a web scrappin biwth bs and selenium
