@@ -7,8 +7,6 @@ from math import sin, cos, pi, sqrt
 import seismicAnalysis as sa
 
 
-
-
 def main(*args):
     factoresC = []
     pseudo_aceleracion = []
@@ -22,7 +20,6 @@ def main(*args):
 
     for t in periodos:
         C = sa.C(T=t, Tp=0.4, Tl=2.5)
-        print(C)
         factoresC.append(C)
         
         Sa=Z*U*C*S/R*g # m/s2
@@ -46,28 +43,16 @@ def main(*args):
         f_sismicas.append(f_sismica)
         f_cortantes.append(f_cortante)
 
-        
-
         counter = counter+1
 
-    print(f_sismicas)
 
-    f_real, V_real = sa.cortanteRealEstructura(f_sismicas, f_cortantes, R)
+    f_real, V_real = sa.fuerzaCortanteRealEstructura(f_sismicas, f_cortantes, R)
 
-    print(periodos)
-    print(factoresC)
-    print(pseudo_aceleracion)
-    print(freq_str)
-    print(desp_espectral)
-    print(diag_matrix)
-    print(f_part_modal)
-    print(acc_u)
-    print(f_sismica)
-    print(f_cortante)
     print("LAS FUERZAS REALES SON: ")
-    print(f_real)
+    print(f_real) # tonf
     print("EL CORTANTE REAL ES DE: ")
-    print(V_real)
+    print(V_real) # tonf
+
 
 if __name__ == "__main__":
     

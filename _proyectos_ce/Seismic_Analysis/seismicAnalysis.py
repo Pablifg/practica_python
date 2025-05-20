@@ -81,17 +81,23 @@ def fuerzaSismicaCortante(diag_matrix, acc_u):
     return f_sismica, f_cortante
 
 def fuerzaSismicaCortanteSumatoria(f_sismicas, f_cortantes):
+    """Calcular la fuerza sśimica de cada piso mediante la sumatoria de RSCSC
+
+    Args:
+        f_sismicas (np.array): matriz de fuerzas sísmicas de los modos de vibración para los pisos del edificio
+        f_cortantes (np.array): matriz de cortante sísmicas de los modos de vibración para los pisos del edificio
+
+    Returns:
+        frcsc (np.array): lista de fuerzas sśimicas aplicando método RCSC (raiz cuadrada de la suma cuadrada de los elementos)
+        Vrcsc (np.array): lista de cortantes sśimicas aplicando método RCSC (raiz cuadrada de la suma cuadrada de los elementos) de cada piso
+    """
     n_pisos = len(f_cortantes[0])
-    print(n_pisos)
     frcsc = np.zeros(n_pisos)
-    #frcsc = np.sqrt(np.sum(np.exp(fuerzaSismicaCortante,2)))
     Vrcsc = np.zeros(n_pisos)
 
     f_sismicas = np.array(f_sismicas).T
     f_cortantes = np.array(f_cortantes).T
 
-    print(f_sismicas)
-    print(f_cortantes)
 
     for i in range(n_pisos):
         frcsc[i] = (f_sismicas[i][0]**2 + f_sismicas[i][1]**2 + f_sismicas[i][2]**2)**0.5
@@ -99,7 +105,18 @@ def fuerzaSismicaCortanteSumatoria(f_sismicas, f_cortantes):
     
     return frcsc , Vrcsc
 
-def cortanteRealEstructura(f_sismicas, f_cortantes, R):
+def fuerzaCortanteRealEstructura(f_sismicas, f_cortantes, R):
+    """Calcular la fuerza sísimica y cortante real de la estructura correspondiente a cada piso
+
+    Args:
+        f_sismicas (np.array): matriz de fuerzas sísmicas de los modos de vibración para los pisos del edificio
+        f_cortantes (np.array): matriz de cortante sísmicas de los modos de vibración para los pisos del edificio_
+        R (float): factor de reducción sísmica
+
+    Returns:
+        f_real (np.array): lista de fuerza sísmica real aplicada a cada piso de la estructura
+        V_real (np.array): lista de cortante sísmico real aplicada a cada piso de la estructura
+    """
     fsum_abs = sum(np.abs(f_sismicas))
     Vsum_abs = sum(np.abs(f_cortantes))
 
